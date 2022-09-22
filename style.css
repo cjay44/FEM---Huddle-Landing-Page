@@ -168,6 +168,10 @@ button:hover {
       /* gap: 3rem; */
    }
 
+   header {
+      /* padding-block-end: 2rem; */
+   }
+
    footer {
       justify-content: flex-end;
    }
