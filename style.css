@@ -7,7 +7,7 @@
     --pri-clr-vi: hsl(257, 40%, 49%);
     --pri-clr-mag: hsl(300, 69%, 71%);
     --pri-clr-heading: rgb(245, 245, 245);
-    --pri-clr-body: rgb(248, 248, 248);
+    --pri-clr-body: rgba(248, 248, 248, 0.859);
     
     
     --fs-500: 1rem; 
@@ -15,7 +15,7 @@
     --fs-600: 1.25rem; 
     --fs-700: 1.5rem;
     --fs-800: 1.75rem;
-    --fs-900: 2.25rem;
+    --fs-dt-heading: 3rem;
 
     --ff-headings: 'Poppins', sans-serif;
     --ff-body: 'Open Sans', sans-serif;
@@ -35,7 +35,7 @@
     background-color: var(--pri-clr-vi);
     background-repeat: no-repeat;
     background-size:  100%;
-
+    height: auto;
  }
 
  .container {
@@ -107,6 +107,8 @@ h1 {
    color: var(--pri-clr-vi);
    box-shadow: 1px 5px 7px rgba(0, 0, 0, 0.234);
    cursor: pointer;
+   font-size: var(--fs-500);
+   background-color: white;
 }
 
 button:hover {
@@ -150,9 +152,7 @@ button:hover {
 
 
 
-
-
-  /* DESKTOP VERSION */
+  /*------------- DESKTOP VERSION ------------- */
 
  @media all and (min-width: 1200px ) {
    .container {
@@ -165,7 +165,7 @@ button:hover {
    .flex-container {
       display: flex; 
       flex-direction: row;
-      gap: 3rem;
+      /* gap: 3rem; */
    }
 
    footer {
@@ -177,22 +177,36 @@ button:hover {
    }
 
    h1 {
-      font-size: var(--fs-900);
-   }
-
-   .section-1 {
-      /* margin-inline-start: 5rem; */
-      margin-block-start: 4rem;
-      max-width: 70%;
-      flex-grow: 1;
+      font-size: var(--fs-dt-heading);
    }
 
    .section-2 {
       margin-block-start: 6rem;
       max-width: auto;
+      padding-inline-start: 3rem;
+   }
 
+   body {
+      background-image: url(images/bg-desktop.svg);
+      background-color: var(--pri-clr-vi);
+      background-size: auto 100%;
+      min-height: 100vh;
+   }
+
+   button {
+      width: 180px;
+      padding: 1rem;
+      border-radius: 30px;
+      border: none;
+      color: var(--pri-clr-vi);
+      box-shadow: 1px 5px 7px rgba(0, 0, 0, 0.234);
+      cursor: pointer;
+      background-color: white;
+      font-size: var(--fs-550);
    }
  }
+
+
 
  @Media all and (max-width: 1200px) {
 
@@ -212,15 +226,4 @@ button:hover {
       align-items: center;
       margin-inline: auto;
    }
-
-
- @media all and (min-width: 400px){
-   body {
-       background-image: url(images/bg-desktop.svg);
-       background-color: var(--pri-clr-vi);
-       background-size: auto 100%;
-       min-height: 100vh;
-    }
-}
-
  }
