@@ -158,7 +158,7 @@ button:hover {
    .container {
       flex-direction: column;
       padding-inline: 4rem;
-      padding-block: 2rem;
+      padding-block: 3rem;
       justify-content: space-around;
    }
 
